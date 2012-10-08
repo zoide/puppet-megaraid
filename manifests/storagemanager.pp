@@ -9,5 +9,7 @@ class megaraid::storagemanager {
   service { $msm_service:
     ensure => 'running',
     enable => true,
+    hasstatus => true,
+    hasrestart => true,
   }
 }
