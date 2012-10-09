@@ -1,16 +1,3 @@
 megaraid
 
-This is the megaraid module.
-
-License
--------
-
-
-Contact
--------
-
-
-Support
--------
-
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+This is a LSI MegaRAID module used to install the MegaRAID Storage Manager and MegaCLI packages. It only supports RedHat and CentOS at the moment and isn't very useful since the RPMs are not in any public repository. You need to extract the MSM_linux_installer tarball to get the RPMs and house them somewhere. In the future it would be neat to wrap the MegaCLI utility to allow Puppet access to perform basic disk and logical volume operations.
