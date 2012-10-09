@@ -7,9 +7,10 @@ class megaraid::storagemanager {
   }
 
   service { $msm_service:
-    ensure => 'running',
-    enable => true,
-    hasstatus => true,
+    ensure     => 'running',
+    enable     => true,
+    hasstatus  => true,
     hasrestart => true,
+    require    => Package[$msm_package],
   }
 }
