@@ -21,5 +21,6 @@
 class megaraid {
   include megaraid::megacli
   include megaraid::storagemanager
+  include megaraid::snmp
 
 }
