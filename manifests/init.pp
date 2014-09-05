@@ -18,9 +18,15 @@
 #
 # Copyright 2012 Andy Shinn
 #
-class megaraid {
-  include megaraid::megacli
-  include megaraid::storagemanager
-  include megaraid::snmp
-
+class megaraid ($ensure = 'present') {
+  case $::osfamily {
+    'Redhat' : {
+      include megaraid::megacli
+      include megaraid::storagemanager
+      include megaraid::snmp
+    }
+    'Debian' : {
+      include megaraid::debian::megacli
+    }
+  }
 }
